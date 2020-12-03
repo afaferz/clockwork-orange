@@ -1,0 +1,89 @@
+.footer{
+    background-color: $cor-principal;
+    height: auto;
+    padding-top: 1em;
+}
+.footer__container{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//Produtoras
+.footer__produtoras{
+    @include df(row);
+    flex-wrap: wrap;
+    margin: 1em 0 0 0;
+    .footer__produtoras__item{
+        margin: .3em
+    }
+}
+
+//Termos
+.footer__termos{
+    @include df(column);
+    margin: 1em 0;
+}
+.footer__termos__item{
+    width: 100%;
+    .footer__termos__link{
+        color: $cor-preta;
+        display: block;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.5em;
+        opacity: .8;
+        padding: .7em 1em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .2s ease-out;
+        &:hover{
+            opacity: 1;
+            color: $cor-branca;
+        }
+    }
+}
+
+//Copyright
+.footer__copyright{
+    @include df(column);
+    width: 100%;
+    .footer__copyright--esquerda,
+    .footer__copyright--direita{
+        font-size: .8em;
+        font-weight: 300;
+        p{
+            cursor: pointer;
+            opacity: .5;
+            padding: .9em;
+            font-weight: lighter;
+            transition: .2s ease-in-out;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//Developer
+.footer__desenvolvimento{
+    text-align: center;
+    padding: .75em;
+    font-size: .75em;
+}
+
+
+//Media breakpoint 768px
+@media screen and (min-width: 768px) {
+    .footer__termos, 
+    .footer__copyright{
+        flex-direction: row;
+    }
+    .footer__termos__link{
+        padding: .7em 3em;
+    }
+}

@@ -1,0 +1,47 @@
+.sidebar{
+    background-color: $cor-principal;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    padding: 3em 0;
+    position: fixed;
+    transition: .5s;
+    top: 0;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+.sidebar__link{
+    color: $cor-preta;
+    font-size: 1.1em;
+    padding: 1em;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s all;
+    &:hover{
+        transform: translateX(3%);
+    }
+}.sidebar__redes{
+    display: block;
+    margin: 1em .5em;
+    // margin-top: 1em;
+    .sidebar__redes--twitter,
+    .sidebar__redes--instagram{
+        display: inline-block;
+        height: 1.75em;
+        line-height: 1.75em;
+        font-size: 1.25em;
+        text-align: center;
+        width: 5em;
+    }
+    .sidebar__redes--twitter{
+        background-color: $cor-preta;
+        color: $cor-branca;
+    }
+    .sidebar__redes--instagram{
+        background-color: $cor-branca;
+        color: $cor-preta;
+    }
+}
