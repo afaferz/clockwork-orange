@@ -1,0 +1,138 @@
+$toggle-size: 3em;
+$toggle-line-color: $cor-branca;
+$toggle-line-focus-color: $cor-preta;
+$toggle-line-size: $toggle-size / 16;
+$toggle-line-angle: 405deg;
+$toggle-anim-speed: 0.9s;
+
+//propriedade das animações
+$outAnimation: (
+  outT 0.8s backwards reverse,
+  outM 0.8s backwards reverse,
+  outBtm 0.8s backwards reverse,
+);
+$inAnimation: (
+  inT 0.8s forwards,
+  inM 0.8s forwards,
+  inBtm 0.8s forwards,
+);
+
+.menu__hamburguer {
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: column;
+    height: 3.5em;
+    justify-content: center;
+    outline: none;
+    transform: translateZ(0);
+    transition: transform 0.1s ease-in-out; 
+    user-select: none;
+    width: 3.5em;
+
+  &:focus .line:after {
+    background-color: $toggle-line-focus-color;
+  }
+
+  //For para colocar as animações no CSS
+  @for $i from 1 through 3{
+
+    $this-outAnimation: nth($outAnimation, $i);
+    $this-inAnimation: nth($inAnimation, $i);
+
+    .linha:nth-of-type(#{$i}){
+      animation: $this-outAnimation;
+      -webkit-animation: $this-outAnimation;
+    }
+    &.ativo{
+      .linha:nth-of-type(#{$i}){
+        animation: $this-inAnimation;
+        -webkit-animation: $this-inAnimation;
+      }
+    }
+  }
+}
+
+.linha {
+    display: block;
+    padding: $toggle-line-size / .75;
+    width: $toggle-size / 1.36;
+
+  &:after {
+    content: "";
+    display: block;
+    background-color: $toggle-line-color;
+    height: $toggle-line-size / 1.5;
+    transition: background-color 0.2s ease-out;
+    transform: translateZ(0) rotate(0);
+    width: 100%;
+  }
+}
+
+//out Animation
+@-webkit-keyframes outT{
+0%{-webkit-transform: translateY(0px) rotate(0deg);}
+50%{-webkit-transform: translateY(9px) rotate(0deg);}
+100%{-webkit-transform: translateY(9px) rotate(135deg);}
+}
+@keyframes outT{
+0%{transform: translateY(0px) rotate(0deg);}
+50%{transform: translateY(9px) rotate(0deg);}
+100%{transform: translateY(9px) rotate(135deg);}
+}
+
+@-webkit-keyframes outM{
+50%{-webkit-transform:rotate(0deg);}
+100%{-webkit-transform:rotate(45deg);}
+}
+@keyframes outM{
+50%{transform:rotate(0deg);}
+100%{transform:rotate(45deg);}
+}
+@-webkit-keyframes outBtm{
+0%{-webkit-transform: translateY(0px) rotate(0deg);}
+50%{-webkit-transform: translateY(-9px) rotate(0deg);}
+100%{-webkit-transform: translateY(-9px) rotate(135deg);}
+}
+@keyframes outBtm{
+0%{transform: translateY(0px) rotate(0deg);}
+50%{transform: translateY(-9px) rotate(0deg);}
+100%{transform: translateY(-9px) rotate(135deg);}
+}
+
+
+//in Animation
+@-webkit-keyframes inT{
+0%{-webkit-transform: translateY(0px) rotate(0deg);}
+50%{-webkit-transform: translateY(9px) rotate(0deg);}
+100%{-webkit-transform: translateY(9px) rotate(135deg);}
+}
+@keyframes inT{
+0%{transform: translateY(0px) rotate(0deg);}
+50%{transform: translateY(9px) rotate(0deg);}
+100%{transform: translateY(9px) rotate(135deg);}
+}
+
+@-webkit-keyframes inM{
+50%{-webkit-transform:rotate(0deg);}
+100%{-webkit-transform:rotate(45deg);}
+}
+@keyframes inM{
+50%{transform:rotate(0deg);}
+100%{transform:rotate(45deg);}
+}
+
+@-webkit-keyframes inBtm{
+0%{-webkit-transform: translateY(0px) rotate(0deg);}
+50%{-webkit-transform: translateY(-9px) rotate(0deg);}
+100%{-webkit-transform: translateY(-9px) rotate(135deg);}
+}
+@keyframes inBtm{
+0%{transform: translateY(0px) rotate(0deg);}
+50%{transform: translateY(-9px) rotate(0deg);}
+100%{transform: translateY(-9px) rotate(135deg);}
+}
+

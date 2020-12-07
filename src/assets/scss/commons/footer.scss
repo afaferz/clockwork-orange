@@ -2,6 +2,9 @@
     background-color: $cor-principal;
     height: auto;
     padding-top: 1em;
+    a{
+        cursor: url(../img/mouseIcon/pointerMouseIcon.ico) 2 2, pointer;
+    }
 }
 .footer__container{
     max-width: 1140px;
@@ -16,9 +19,10 @@
 .footer__produtoras{
     @include df(row);
     flex-wrap: wrap;
-    margin: 1em 0 0 0;
+    margin: 1em 0 2em 0;
     .footer__produtoras__item{
-        margin: .3em
+        margin: 0em 1em;
+        max-width: 6em;
     }
 }
 
@@ -67,6 +71,11 @@
             }
         }
     }
+    .footer__copyright--direita{
+        p{
+            text-align: center;
+        }
+    }
 }
 
 //Developer
@@ -76,6 +85,20 @@
     font-size: .75em;
 }
 
+.--break{
+    display: none;
+}
+//--break style
+@media screen and (max-width: 500px){
+    .--break{
+        display: block;
+    }
+    .footer__copyright--direita{
+        p{
+            line-height: 1.4em;
+        }
+    }
+}
 
 //Media breakpoint 768px
 @media screen and (min-width: 768px) {

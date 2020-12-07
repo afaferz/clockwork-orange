@@ -1,9 +1,10 @@
 .sidebar{
     background-color: $cor-principal;
+    font-family: 'Padauk', sans-serif;
     height: 100%;
     left: 0;
     overflow-x: hidden;
-    padding: 3em 0;
+    padding: 4em 0;
     position: fixed;
     transition: .5s;
     top: 0;
@@ -11,6 +12,7 @@
     display: flex;
     flex-direction: column;
     z-index: 2;
+    transition: .4s all;
 }
 .sidebar__link{
     color: $cor-preta;
@@ -21,12 +23,13 @@
     text-transform: uppercase;
     transition: .3s all;
     &:hover{
+        color: $cor-branca;
         transform: translateX(3%);
     }
 }.sidebar__redes{
     display: block;
     margin: 1em .5em;
-    // margin-top: 1em;
+    
     .sidebar__redes--twitter,
     .sidebar__redes--instagram{
         display: inline-block;
@@ -34,7 +37,11 @@
         line-height: 1.75em;
         font-size: 1.25em;
         text-align: center;
+        transition: 1s all;
         width: 5em;
+        &:hover{
+            cursor: url(../img/mouseIcon/orangeMouseIcon.ico) 2 2, pointer;
+        }
     }
     .sidebar__redes--twitter{
         background-color: $cor-preta;
@@ -44,4 +51,8 @@
         background-color: $cor-branca;
         color: $cor-preta;
     }
+}
+
+.ativo{
+    width: 15em;
 }
