@@ -1,8 +1,9 @@
 .sidebar{
     background-color: $cor-principal;
-    font-family: 'Padauk', sans-serif;
+    font-family: $font-Anton;
     height: 100%;
     left: 0;
+    letter-spacing: .05rem;
     overflow-x: hidden;
     padding: 4em 0;
     position: fixed;

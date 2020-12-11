@@ -1,0 +1,99 @@
+.conteudo-videos{
+    background-color: red;
+    height: 100vh;
+}
+.conteudo-videos-container{
+    background-color: $cor-preta;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    width: 100%;
+}
+.conteudo-videos__video{
+    background-color: khaki;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    .video-principal{
+        height: 100%;
+        width: 100%;
+    }
+}
+.conteudo-videos__sequencia{
+    height: auto;
+    margin-top: 1em;
+    width: auto;
+    overflow-y: scroll;
+    scrollbar-color: $cor-principal transparent;
+    scrollbar-width: auto;
+    [data-video]{
+        border: 3px orange double;
+        height: 11em;
+        margin-bottom: .9em;
+        width: 100%;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+//Horizontal
+@media screen and (max-width: 820px) and (orientation: landscape){
+    .conteudo-videos{
+        height: auto;
+    }
+    .conteudo-videos__video{
+        height: 90vh;
+    }
+    .conteudo-videos__sequencia{
+        display: flex;
+        margin: 1em 0;
+        width: auto;
+        height: 50%;
+        [data-video]{
+            display: block;
+            margin: 0 1em 0 0;
+            height: 100%;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+//iPad and iPad Pro
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .conteudo-videos__sequencia{
+        display: flex;
+        margin: 1em 0;
+        width: auto;
+        [data-video]{
+            display: block;
+            margin: 0 1em 0 0;
+            height: 100%;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+//Desktop
+@media screen and (min-width: 992px){
+    .conteudo-videos-container{
+        flex-direction: row;
+        padding: 3em;
+    }
+    .conteudo-videos__video{
+        width: 70%;
+    }
+    .conteudo-videos__sequencia{
+        margin-left: 1em;
+        margin-top: 0;
+        width: 30%;
+        [data-video]{
+            display: block;
+            margin: 0 auto .9em auto;
+            width: 18em;
+        }
+    }
+}

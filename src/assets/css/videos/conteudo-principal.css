@@ -1,0 +1,54 @@
+.conteudo-videos {
+  background-color: red;
+  height: 100vh; }
+
+.conteudo-videos-container {
+  background-color: ivory;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  width: 100%; }
+
+.conteudo-videos__video {
+  background-color: khaki;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%; }
+  .conteudo-videos__video .video-principal {
+    height: 100%;
+    width: 100%; }
+
+.conteudo-videos__sequencia {
+  background: url(../img/laranjamecanicawp.jpeg) no-repeat center/cover;
+  border: 10px black solid;
+  height: auto;
+  margin-top: 1em;
+  width: auto;
+  overflow-y: scroll; }
+  .conteudo-videos__sequencia [data-video] {
+    border: 3px orange double;
+    height: auto;
+    margin-bottom: .5em;
+    width: 100%; }
+    .conteudo-videos__sequencia [data-video]:last-of-type {
+      margin-bottom: 0; }
+
+@media screen and (min-width: 768px) {
+  .conteudo-videos-container {
+    flex-direction: row;
+    padding: 3em; }
+  .conteudo-videos__video {
+    width: 70%; }
+  .conteudo-videos__sequencia {
+    margin-left: 1em;
+    margin-top: 0;
+    width: 30%; }
+    .conteudo-videos__sequencia [data-video] {
+      display: block;
+      margin: 0 auto .5em auto; } }
+
+@media screen and (min-width: 992px) {
+  .conteudo-videos__sequencia [data-video] {
+    width: auto; } }

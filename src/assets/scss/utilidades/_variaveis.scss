@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Castoro&family=Open+Sans&display=swap');
 body{
     cursor: url(../img/mouseIcon/arrowMouseIcon.ico) 2 2, default;
 }
@@ -6,6 +8,9 @@ body{
 $cor-principal: #FFA500;
 $cor-preta: #111111;
 $cor-branca: #fdfdfd;
+$font-Anton: 'Anton', sans-serif;
+$font-Padauk: 'Padauk', sans-serif;
+$font-Castoro: 'Castoro', serif;;
 
 @mixin df($direction){
     align-items: center;

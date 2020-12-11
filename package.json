@@ -1,7 +1,6 @@
 {
   "name": "clockworkorange",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afaferz/clockworkOrange.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afaferz/clockworkOrange/issues"
+  },
+  "homepage": "https://github.com/afaferz/clockworkOrange#readme",
+  "description": ""
 }

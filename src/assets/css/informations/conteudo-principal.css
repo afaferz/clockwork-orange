@@ -17,6 +17,8 @@
   background-color: turquoise;
   text-align: left;
   width: 100%; }
+  .conteudo-informacao__sinopse .conteudo-informacao__sinopse__kubrick {
+    font-size: 2em; }
 
 .conteudo-informacao__detalhes {
   background-color: wheat;

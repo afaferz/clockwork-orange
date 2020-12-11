@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Padauk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Castoro&family=Open+Sans&display=swap");
 body {
   cursor: url(../img/mouseIcon/arrowMouseIcon.ico) 2 2, default; }
 
@@ -42,9 +44,10 @@ input {
 
 .sidebar {
   background-color: #FFA500;
-  font-family: 'Padauk', sans-serif;
+  font-family: "Anton", sans-serif;
   height: 100%;
   left: 0;
+  letter-spacing: .05rem;
   overflow-x: hidden;
   padding: 4em 0;
   position: fixed;
@@ -364,7 +367,10 @@ input {
   width: auto;
   height: auto; }
   .conteudo-principal__titulo .conteudo-principal__titulo--img {
+    transition: 1s all;
     width: 22em; }
+    .conteudo-principal__titulo .conteudo-principal__titulo--img:hover {
+      transform: scale3d(1.1, 1.1, 1.1); }
     @media screen and (min-width: 601px) {
       .conteudo-principal__titulo .conteudo-principal__titulo--img {
         width: 40em; } }

@@ -15,7 +15,11 @@
     width: auto;
     height: auto;
     .conteudo-principal__titulo--img{
+        transition: 1s all;
         width: 22em;
+        &:hover{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
         @media screen and (min-width: 601px) {
             width: 40em;
         }
