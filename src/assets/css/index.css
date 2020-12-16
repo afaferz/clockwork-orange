@@ -121,139 +121,27 @@ input {
 .menu__hamburguer {
   align-items: center;
   background-color: transparent;
-  border-color: transparent;
+  border: none;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   height: 3.5em;
   justify-content: center;
   outline: none;
   transform: translateZ(0);
-  transition: transform 0.1s ease-in-out;
-  user-select: none;
-  width: 3.5em; }
-  .menu__hamburguer:focus .line:after {
-    background-color: #111111; }
-  .menu__hamburguer .linha:nth-of-type(1) {
-    animation: outT 0.8s backwards reverse;
-    -webkit-animation: outT 0.8s backwards reverse; }
-  .menu__hamburguer.ativo .linha:nth-of-type(1) {
-    animation: inT 0.8s forwards;
-    -webkit-animation: inT 0.8s forwards; }
-  .menu__hamburguer .linha:nth-of-type(2) {
-    animation: outM 0.8s backwards reverse;
-    -webkit-animation: outM 0.8s backwards reverse; }
-  .menu__hamburguer.ativo .linha:nth-of-type(2) {
-    animation: inM 0.8s forwards;
-    -webkit-animation: inM 0.8s forwards; }
-  .menu__hamburguer .linha:nth-of-type(3) {
-    animation: outBtm 0.8s backwards reverse;
-    -webkit-animation: outBtm 0.8s backwards reverse; }
-  .menu__hamburguer.ativo .linha:nth-of-type(3) {
-    animation: inBtm 0.8s forwards;
-    -webkit-animation: inBtm 0.8s forwards; }
-
-.linha {
-  display: block;
-  padding: 0.25em;
-  width: 2.20588em; }
-  .linha:after {
-    content: "";
-    display: block;
-    background-color: #fdfdfd;
-    height: 0.125em;
-    transition: background-color 0.2s ease-out;
-    transform: translateZ(0) rotate(0);
+  transition: transform 0.5s ease-in-out;
+  width: 3.5em;
+  user-select: none; }
+  .menu__hamburguer .linha {
+    background: #fdfdfd;
+    border-radius: 9px;
+    height: 2px;
+    margin: 3px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    transform-origin: left center;
     width: 100%; }
-
-@-webkit-keyframes outT {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg); }
-  50% {
-    -webkit-transform: translateY(9px) rotate(0deg); }
-  100% {
-    -webkit-transform: translateY(9px) rotate(135deg); } }
-
-@keyframes outT {
-  0% {
-    transform: translateY(0px) rotate(0deg); }
-  50% {
-    transform: translateY(9px) rotate(0deg); }
-  100% {
-    transform: translateY(9px) rotate(135deg); } }
-
-@-webkit-keyframes outM {
-  50% {
-    -webkit-transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(45deg); } }
-
-@keyframes outM {
-  50% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(45deg); } }
-
-@-webkit-keyframes outBtm {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg); }
-  50% {
-    -webkit-transform: translateY(-9px) rotate(0deg); }
-  100% {
-    -webkit-transform: translateY(-9px) rotate(135deg); } }
-
-@keyframes outBtm {
-  0% {
-    transform: translateY(0px) rotate(0deg); }
-  50% {
-    transform: translateY(-9px) rotate(0deg); }
-  100% {
-    transform: translateY(-9px) rotate(135deg); } }
-
-@-webkit-keyframes inT {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg); }
-  50% {
-    -webkit-transform: translateY(9px) rotate(0deg); }
-  100% {
-    -webkit-transform: translateY(9px) rotate(135deg); } }
-
-@keyframes inT {
-  0% {
-    transform: translateY(0px) rotate(0deg); }
-  50% {
-    transform: translateY(9px) rotate(0deg); }
-  100% {
-    transform: translateY(9px) rotate(135deg); } }
-
-@-webkit-keyframes inM {
-  50% {
-    -webkit-transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(45deg); } }
-
-@keyframes inM {
-  50% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(45deg); } }
-
-@-webkit-keyframes inBtm {
-  0% {
-    -webkit-transform: translateY(0px) rotate(0deg); }
-  50% {
-    -webkit-transform: translateY(-9px) rotate(0deg); }
-  100% {
-    -webkit-transform: translateY(-9px) rotate(135deg); } }
-
-@keyframes inBtm {
-  0% {
-    transform: translateY(0px) rotate(0deg); }
-  50% {
-    transform: translateY(-9px) rotate(0deg); }
-  100% {
-    transform: translateY(-9px) rotate(135deg); } }
 
 .footer {
   background-color: #FFA500;
