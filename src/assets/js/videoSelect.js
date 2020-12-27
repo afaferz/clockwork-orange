@@ -8,6 +8,7 @@ itens.forEach((element)=>{
 
 
 function SelectVideo(element){
+    console.log(element)
     const div = element.target.parentElement;
     const videoURL = div.getAttribute('data-src');
 

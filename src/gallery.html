@@ -40,26 +40,26 @@
 
         <section class="conteudo-principal">
             <div class="conteudo-principal__galeria">
-                <a class="botao-anterior" href="" data-control="ant">Anterior</a>
-                <a class="botao-proximo" href="" data-control="prev">Próximo</a>
+                <span class="botao botao-anterior" data-control-i="ant"><i class="fas fa-chevron-left"></i></span>
+                <span class="botao botao-proximo" data-control-i="prox"><i class="fas fa-chevron-right"></i></span>
                 <div class="conteudo-principal__imagem">
-                    <img src="#" alt="">
+                    <img data-imagem="principal" src="./assets/img/videos/img_trailerI.jpeg" alt="">
                 </div>
             </div>
             <div class="conteudo-principal__sequencia">
-                <a href="" data-control="ant"></a>
-                <a href="" data-control="prev"></a>
+                <span class="ativo-botao" data-control-s="ant"></span>
+                <span class="ativo-botao" data-control-s="prox"></span>
                 <ul>
-                    <li><img src="./assets/img/clockworkOranga-readme.jpeg" alt=""></li>
-                    <li><img src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
-                    <li><img src="./assets/img/drugsBg2.jpg" alt=""></li>
-                    <li><img src="./assets/img/produtoras/warner-bros.svg" alt=""></li>
-                    <li><img src="./assets/img/videos/img_flatblock.jpg" alt=""></li>
-                    <li><img src="./assets/img/videos/img_singing-in-the-rain.jpg" alt=""></li>
-                    <li><img src="./assets/img/videos/img_ludovico.jpg" alt=""></li>
-                    <li><img src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
-                    <li><img src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
-                    <li><img src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
+                    <li class="img-ativo"><img data-img="0" src="./assets/img/clockworkOranga-readme.jpeg" alt=""></li>
+                    <li><img data-img="1" src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
+                    <li><img data-img="2" src="./assets/img/drugsBg2.jpg" alt=""></li>
+                    <li><img data-img="3" src="./assets/img/produtoras/warner-bros.svg" alt=""></li>
+                    <li><img data-img="4" src="./assets/img/videos/img_flatblock.jpg" alt=""></li>
+                    <li><img data-img="5" src="./assets/img/videos/img_singing-in-the-rain.jpg" alt=""></li>
+                    <li><img data-img="6" src="./assets/img/videos/img_ludovico.jpg" alt=""></li>
+                    <li><img data-img="7" src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
+                    <li><img data-img="8" src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
+                    <li><img data-img="9" src="./assets/img/clockworkOrangeTitle.png" alt=""></li>
                 </ul>
             </div>
         </section>
@@ -149,5 +149,6 @@
 
         <script src="https://kit.fontawesome.com/ae85a76695.js" crossorigin="anonymous"></script>
         <script src="./assets/js/menu.js"></script>
+        <script src="./assets/js/URLSelect.js"></script>
     </body>
 </html>
