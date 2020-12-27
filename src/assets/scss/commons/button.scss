@@ -1,50 +1,62 @@
-//propriedade das animações
-$outAnimation: (
-  outT 0.8s backwards reverse,
-  outM 0.8s backwards reverse,
-  outBtm 0.8s backwards reverse,
-);
-$inAnimation: (
-  inT 0.8s forwards,
-  inM 0.8s forwards,
-  inBtm 0.8s forwards,
-);
-
 .menu__hamburguer {
-    align-items: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 3.5em;
-    justify-content: center;
+    display: block;
+    left: .8em;
+    padding: 0;
+    position: relative;
     outline: none;
     transform: translateZ(0);
-    transition: transform 0.5s ease-in-out; 
-    width: 3.5em;
+    top: .5em;
     user-select: none;
+    width: 2.5em;
     .linha{
       background: $cor-branca;
-      border-radius: 9px;
-      height: 2px;
-      margin: 3px;
+      border-radius: 4px;
+      display: block;
+      height: 2.5px;
+      left: 0;
+      margin: .5em 0 .5em 0;
       opacity: 1;
+      position: absolute;
       transform: rotate(0deg);
-      transition: .25s ease-in-out;
       transform-origin: left center;
+      transition: .25s ease-in-out;
       width: 100%;
     }
 
-
-  //For para colocar as animações no CSS
-    @for $i from 1 through 3{
-      .linha:nth-of-type(#{$i}){
-        
+    .linha:nth-of-type(1){
+      top: 0px;
+    }
+    .linha:nth-of-type(2){
+      top: 10px;
+    }
+    .linha:nth-of-type(3){
+      top: 20px;
+    }
+    &.ativo{
+      .linha:nth-of-type(1){
+        top: 0;
+        left: .5rem;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .linha:nth-of-type(2){
+       opacity: 0;
+       width: 0%;
+      }
+      .linha:nth-of-type(3){
+        top: 1.65rem;
+        left: .5rem;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
       }
     }
 }
-
-//out Animation
 
 
