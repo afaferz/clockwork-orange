@@ -140,6 +140,7 @@ input {
     width: auto; }
     .conteudo-principal__sequencia ul li.img-ativo {
       border: 3px solid #111111;
+      filter: blur(3px);
       opacity: .8; }
     .conteudo-principal__sequencia ul li img {
       cursor: pointer;

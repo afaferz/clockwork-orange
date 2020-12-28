@@ -3,7 +3,8 @@ class URLSelect{
         this._principal = document.querySelector(principal);
         this._sequencia = Array.from(document.querySelectorAll(sequencia));
         this.elementoAtivo = document.getElementsByClassName(classeAtiva);
-        this.classeAtiva = classeAtiva;
+        this.classe = classeAtiva;
+
         this._indiceAtual = 0;
 
         //Botões
@@ -21,33 +22,58 @@ class URLSelect{
 
     }
 
-    get URLAtual(){
-        this._principal.getAttribute('src');
-    }
-
     preLoad(){
        return this._principal.src = this._sequencia[0].getAttribute('src');
     }
 
     selectURL(elemento){
         this._principal.src = elemento.target.getAttribute('src');
-        this.elementoAtivo[0].classList.remove(this.classeAtiva);
-        return elemento.target.parentElement.classList.add(this.classeAtiva);
+
+        this._indiceAtual = elemento.target.getAttribute('data-img');
+        
+        this.elementoAtivo[0].classList.remove(this.classe);
+
+        return {
+            class: elemento.target.parentElement.classList.add(this.classe),
+            // index: this._indiceAtual
+        }
     }
 
+    slideAtual(){
+        return [parseInt(this._sequencia[this._indiceAtual].getAttribute('data-img')), this._sequencia[this._indiceAtual]];
+    }
+
+    classeAtiva(imagens, elementoAtivo){
+        elementoAtivo[0].classList.remove(this.classe);
+        imagens[this._indiceAtual].parentElement.classList.add('img-ativo');
+    }
     antImg(){
-        var i;
-        console.log('anterior')
-        for (i = 0; i < this._sequencia.length; i++) {
-            this._principal.src = this._sequencia[i].getAttribute('src');
-        }
+        this.slideAtual()[0] == 0 ? this._indiceAtual = 0 : this._indiceAtual = (this.slideAtual()[0] - 1);
+
+
+        // if(this.slideAtual()[0] == 0){
+        //     this._indiceAtual = 0;
+        // }
+        // else{
+        //     this._indiceAtual = (this.slideAtual()[0] - 1);
+        // }
+        this._principal.src = this._sequencia[this._indiceAtual].getAttribute('src');
+        
+        this.classeAtiva(this._sequencia, this.elementoAtivo);
     }
     proxImg(){
-        var i;
-        console.log('proximo');
-        for (i = 0; i < this._sequencia.length; i++) {
-            this._principal.src = this._sequencia[i].getAttribute('src');
-        }
+        this.slideAtual()[0] >= (this._sequencia.length -1) ? this._indiceAtual = 0 : this._indiceAtual = (this.slideAtual()[0] + 1);
+
+
+        // if(this.slideAtual()[0] >= (this._sequencia.length -1)){
+        //     this._indiceAtual = 0;;
+        // }
+        // else{
+        //     this._indiceAtual = (this.slideAtual()[0] + 1);
+        // }
+        this._principal.src = this._sequencia[this._indiceAtual].getAttribute('src');
+        
+        this.classeAtiva(this._sequencia, this.elementoAtivo);
     }
 }
 
