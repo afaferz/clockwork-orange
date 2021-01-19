@@ -20,6 +20,8 @@ class URLSelect{
         //Evento de clicar na imagem e trocar URL
         this._sequencia.forEach(img => img.addEventListener('click', this.selectURL.bind(this)));
 
+        //Evento de clicar e mover a barra de sequência
+        this.sequenciaController(this.botoesSequencia);
     }
 
     preLoad(){
@@ -75,6 +77,23 @@ class URLSelect{
         
         this.classeAtiva(this._sequencia, this.elementoAtivo);
     }
+
+    sequenciaController(botoes){
+        const sequencia = document.querySelector('.conteudo-principal__sequencia ul');
+        botoes[0].addEventListener('click', ()=>{
+            console.log('botao voltar');
+            sequencia.scrollBy(-400,0);
+        });
+        botoes[1].addEventListener('click', ()=>{
+            sequencia.scrollBy(400,0);
+        });
+
+        // console.log(sequencia.scrollTo(100, 0))
+        // sequencia.addEventListener('scroll', (e)=>{
+        //     console.log(e.target.scrollLeft, e.target);
+        // })
+    }
+
 }
 
 new URLSelect('[data-imagem="principal"]', '[data-img]', 'img-ativo');

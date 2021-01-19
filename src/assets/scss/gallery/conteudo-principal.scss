@@ -1,9 +1,11 @@
 .conteudo-principal{
     background-color: $cor-preta;
-    height: 100vh;
+}
+.conteudo-principal-container{
     display: grid;
     grid-template-rows: 75% auto;
     grid-template-columns: auto;
+    height: 100vh;  
 }
 [data-control-i], [data-control-s]{
     cursor: pointer;
@@ -11,7 +13,7 @@
 .conteudo-principal__galeria{
     display: block;
     grid-row: 1 / 2;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     position: relative;
     width: 100%;
@@ -38,16 +40,18 @@
     }
 }
 .conteudo-principal__imagem{
-    display: block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     height: 100%;
     margin: 0 auto;
-    max-width: 1200px;
     width: 100%;
     img{
         display: block;
-        height: 100%;
-        margin: 0 auto;
+        height: auto;
+        max-height: 100%;
         max-width: 100%;
+        width: auto;
     }
 }
 
@@ -66,6 +70,9 @@
         z-index: 999;
         &.ativo-botao{
             opacity: 1;
+        }
+        &.overlay-botao{
+            opacity: .7;
         }
 
         //Ícone dos botões 'Anterior-Próximo'
@@ -101,7 +108,7 @@
     margin: 0 auto;
     padding: .4em 0;
     overflow-x: scroll;
-    scrollbar-width: none;
+    scrollbar-width: inherit;
     width: auto;
     li{
         border: 3px solid $cor-principal;
