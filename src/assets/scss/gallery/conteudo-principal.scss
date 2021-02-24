@@ -8,7 +8,7 @@
     height: 100vh;  
 }
 [data-control-i], [data-control-s]{
-    cursor: pointer;
+  cursor: pointer;
 }
 .conteudo-principal__galeria{
     display: block;
@@ -67,7 +67,7 @@
         overflow: hidden;
         width: 1.85em;
         opacity: 0;
-        z-index: 999;
+        z-index: 1;
         &.ativo-botao{
             opacity: 1;
         }
@@ -111,12 +111,13 @@
     scrollbar-width: inherit;
     width: auto;
     li{
-        border: 3px solid $cor-principal;
-        display: inline-block;
-        height: 100%;
-        margin: 0 .3em;
-        width: auto;
-        &.img-ativo{
+      border: 3px solid $cor-principal;
+      display: inline-block;
+      height: 100%;
+      margin: 0 .3em;
+      width: auto;
+      transition: 1s ease-out;
+      &.img-ativo{
             border: 3px solid $cor-preta;
             filter: blur(3px);
             opacity: .8;

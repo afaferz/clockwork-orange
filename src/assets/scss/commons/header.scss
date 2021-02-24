@@ -5,7 +5,7 @@
     height: 50px;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     transition: .5s ease-in-out;
     &.information{
         background-color: $cor-principal;

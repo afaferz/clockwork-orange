@@ -105,7 +105,7 @@ input {
     overflow: hidden;
     width: 1.85em;
     opacity: 0;
-    z-index: 999; }
+    z-index: 1; }
     .conteudo-principal__sequencia [data-control-s].ativo-botao {
       opacity: 1; }
     .conteudo-principal__sequencia [data-control-s].overlay-botao {
@@ -143,7 +143,8 @@ input {
     display: inline-block;
     height: 100%;
     margin: 0 .3em;
-    width: auto; }
+    width: auto;
+    transition: 1s ease-out; }
     .conteudo-principal__sequencia ul li.img-ativo {
       border: 3px solid #111111;
       filter: blur(3px);

@@ -103,7 +103,7 @@ input {
   height: 50px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   transition: .5s ease-in-out; }
   .header.information {
     background-color: #FFA500; }
@@ -127,7 +127,8 @@ input {
   cursor: pointer;
   display: block;
   left: .8em;
-  padding: 0;
+  margin: .5em 0;
+  padding: 20px 20px 0 20px;
   position: relative;
   outline: none;
   transform: translateZ(0);
@@ -140,7 +141,6 @@ input {
     display: block;
     height: 2.5px;
     left: 0;
-    margin: .5em 0 .5em 0;
     opacity: 1;
     position: absolute;
     transform: rotate(0deg);
