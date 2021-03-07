@@ -47,7 +47,7 @@ input {
 
 .conteudo-principal-container {
   display: grid;
-  grid-template-rows: 75% auto;
+  grid-template-rows: 75% 25%;
   grid-template-columns: auto;
   height: 100vh; }
 
@@ -62,10 +62,10 @@ input {
   position: relative;
   width: 100%; }
   .conteudo-principal__galeria .botao {
-    font-size: 1.25em;
     color: #fdfdfd;
-    text-decoration: none;
-    padding: 1em; }
+    font-size: 1.25em;
+    padding: 1em;
+    text-decoration: none; }
   .conteudo-principal__galeria [data-control-i] {
     position: absolute;
     top: 50%;
@@ -94,22 +94,16 @@ input {
     width: auto; }
 
 .conteudo-principal__sequencia {
+  align-items: center;
+  display: flex;
   grid-row: 2 / 2;
-  margin-top: .4em;
-  overflow: hidden;
   position: relative; }
   .conteudo-principal__sequencia [data-control-s] {
-    background-color: black;
+    background: linear-gradient(to left, rgba(22, 21, 21, 0.9), #131212);
     height: 100%;
     position: absolute;
-    overflow: hidden;
     width: 1.85em;
-    opacity: 0;
     z-index: 1; }
-    .conteudo-principal__sequencia [data-control-s].ativo-botao {
-      opacity: 1; }
-    .conteudo-principal__sequencia [data-control-s].overlay-botao {
-      opacity: .7; }
     .conteudo-principal__sequencia [data-control-s]::before {
       content: "";
       color: #FFA500;
@@ -118,6 +112,8 @@ input {
       top: 50%;
       width: 0;
       height: 0; }
+    .conteudo-principal__sequencia [data-control-s].opaco {
+      opacity: 0; }
     .conteudo-principal__sequencia [data-control-s]:nth-of-type(1) {
       left: 0; }
       .conteudo-principal__sequencia [data-control-s]:nth-of-type(1)::before {
@@ -129,33 +125,37 @@ input {
         border-left-color: currentcolor;
         left: 20%; }
 
-.conteudo-principal__sequencia ul {
-  display: flex;
-  flex-direction: row;
+.container-carrossel {
   height: 100%;
-  margin: 0 auto;
+  overflow: hidden;
   padding: .4em 0;
-  overflow-x: scroll;
-  scrollbar-width: inherit;
-  width: auto; }
-  .conteudo-principal__sequencia ul li {
+  scroll-behavior: smooth;
+  width: 100%; }
+
+.container-carrossel .carrossel {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%; }
+  .container-carrossel .carrossel li {
+    display: block;
     border: 3px solid #FFA500;
-    display: inline-block;
-    height: 100%;
+    min-width: 25%;
     margin: 0 .3em;
-    width: auto;
-    transition: 1s ease-out; }
-    .conteudo-principal__sequencia ul li.img-ativo {
+    transition: .5s ease all; }
+    .container-carrossel .carrossel li.img-ativo {
       border: 3px solid #111111;
       filter: blur(3px);
       opacity: .8; }
-    .conteudo-principal__sequencia ul li img {
+    .container-carrossel .carrossel li img {
       cursor: pointer;
       border: transparent;
       height: 100%;
-      min-width: 200px;
       width: 100%; }
 
 @media screen and (min-width: 992px) {
-  .conteudo-principal__sequencia ul li {
-    min-width: 300px; } }
+  .conteudo-principal__imagem {
+    display: block;
+    margin: 0 0; }
+    .conteudo-principal__imagem img {
+      height: 100%;
+      width: 100%; } }
