@@ -3,12 +3,12 @@
 
 ## Este projeto tem como objetivo final criar e aplicar um site "fan made" para o filme _Laranja Mecânica_ (A Clockwork Orange)
 ___
-O propósito da criação é treinar meus conhecimentos sobre desenvolvimento web e aplicação de servidores 😄
+O propósito da criação é treinar meus conhecimentos sobre desenvolvimento web e homenagear um de meus filmes favoritos 😄
 
 
 ### Etapa atual de produção 
  - [X] Configuração de servidor teste NGINX
- - [ ] Criação de ```class``` JavaScript para imagens em _gallery_
+ - [X] Criação de ```class``` JavaScript para imagens em _gallery_
  - [ ] Compressão de imagens
 
 
@@ -19,7 +19,7 @@ O propósito da criação é treinar meus conhecimentos sobre desenvolvimento we
   - [x] home
   - [x] videos
   - [x] informations
-  - [ ] gallery
+  - [X] gallery
 
 🔶 Revisar o SCSS
 
@@ -41,12 +41,11 @@ O propósito da criação é treinar meus conhecimentos sobre desenvolvimento we
   ### 📄 Metodologia adotada
   - Mobile First
   - Foco em performance
-  - Padrão BEM (Css)
+  - Padrão BEM (CSS)
 
 ## 💻 Pré-requisitos 
 
-Antes de contribuir, verifique se possui alguns pré-requisitos
-* Servidor com suporte HTTP/1.1 
+Antes de contribuir, verifique se possui alguns pré-requisitos 
 * Node.js versão v13+ 
 * Gerenciador de pacotes _NPM_ ou _Yarn_
 * Gulp v3.9+
